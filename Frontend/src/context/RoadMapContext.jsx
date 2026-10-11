@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from "react";
 export const RoadMapContext = createContext(null);
 
 export const RoadMapProvider = ({ children }) => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [roadmap, setRoadmap] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -24,7 +25,7 @@ export const RoadMapProvider = ({ children }) => {
     localStorage.removeItem("roadmap");
 
     try {
-      const response = await fetch("http://localhost:3000/api/roadmap", {
+      const response = await fetch(`${API_URL}/api/roadmap`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

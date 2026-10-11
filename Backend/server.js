@@ -32,16 +32,9 @@ Create appropriate phases and topics based on the user's information.
 
     const parsedRoadmap = JSON.parse(roadmap);
 
-    // console.log("Roadmap generated successfully:", parsedRoadmap);
-    console.log("PROMPT SENT TO AI:", prompt);
-    console.log(Date.now());
-    console.log(req.body);
-
     res.json({
       roadmap: parsedRoadmap,
     });
-
-    console.log("Roadmap generated successfully:", roadmap);
   } catch (error) {
     console.error("AI error:", error);
 

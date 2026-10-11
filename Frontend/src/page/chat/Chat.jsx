@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import "./Chat.css";
 
 const Chat = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState(() => {
     try {
@@ -41,7 +42,7 @@ const Chat = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/chat", {
+      const response = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
