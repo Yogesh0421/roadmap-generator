@@ -1,0 +1,54 @@
+/* =========================
+   TOPIC COMPLETION
+========================= */
+
+.topic-complete-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+
+  background: transparent;
+  color: var(--color-heading);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.topic-complete-btn:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
+}
+
+.topic-complete-btn span {
+  font-size: 16px;
+}
+
+.topic-complete-btn.completed {
+  background: var(--color-disabled);
+  border-color: var(--color-heading);
+  color: var(--color-background);
+}
+
+.topic-card.completed {
+  opacity: 0.82;
+}
+
+.topic-card.completed .topic-title {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}

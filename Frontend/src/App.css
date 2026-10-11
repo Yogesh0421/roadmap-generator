@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --border: #334155;
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+
+  --success: #22c55e;
+  --error: #ef4444;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* 
+#0f0f0f0 usage AAA
+#1c1c1c usage AA
+#3c3c3c usage disabled text
+#5a5a5a
+#7a7a7a usage border hover
+#9b9b9b usage form border
+#bfbfbf usage input border
+#dcdcdc usage hover state
+#f4f4f4 usage background
+*/
